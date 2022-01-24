@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install XCode tools
+xcode-select --install
+
 # Install and update Homebrew
 BREWPATH=$(which brew);
 [ ! $BREWPATH ] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
