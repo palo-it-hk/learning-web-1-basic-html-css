@@ -1,24 +1,42 @@
 #!/bin/bash
 
-# Install XCode tools
-xcode-select --install
+exists()
+{
+  if command -v $1 &>/dev/null
+  then
+    return 0
+  else
+    return 1
+    fi
+}
 
-# Install and update Homebrew
-BREWPATH=$(which brew);
-[ ! $BREWPATH ] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew update
+# Install or update Homebrew
+if exists brew
+then
+  echo 'HomeBrew already installed'
+  brew upgrade
+else
+  echo 'Installing HomebBrew'
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Install VSCode if it's not already installed
-CODEPATH=$(which code);
-[ ! $CODEPATH ] && [ ! -d "/Applications/Visual Studio Code.app" ] && (brew install --cask visual-studio-code);
+if exists code
+then
+  echo 'VSCode already installed'
+else
+  echo 'Installing VSCode'
+  brew install --cask visual-studio-code;
+fi
 
 # Install Git if it's not already installed
-GITPATH=$(which git);
-[ ! $GITPATH ] && brew install git;
-
-# Install Node if it's not already installed
-NODEPATH=$(which node);
-[ ! $NODEPATH ] && brew install node;
+if exists git
+then
+  echo 'Git already installed'
+else
+  echo 'Installing Git'
+  brew install git;
+fi
 
 # Creating the working folders
 LNLFOLDER=~/lunch-and-learn;
@@ -29,10 +47,11 @@ BASICFOLDER=$LEARNWEBFOLDER/1-basic-html-css;
 [ ! -d $LEARNWEBFOLDER ] && mkdir $LEARNWEBFOLDER
 
 # Clone the git repository
-ACCESS_TOKEN=$1;
+ACCESS_TOKEN=$2;
+USERNAME=$1;
 [ ! -d ${BASICFOLDER} ] && git clone https://$ACCESS_TOKEN@github.com/palo-it-hk/learning-web-1-basic-html-css.git $BASICFOLDER
 cd $BASICFOLDER;
-git config user.name "palo-it-hk-playground";
+git config user.name $USERNAME;
 git pull;
 
 # Open VSCode with the project
