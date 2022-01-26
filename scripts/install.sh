@@ -51,6 +51,7 @@ ACCESS_TOKEN=$2;
 USERNAME=$1;
 [ ! -d ${BASICFOLDER} ] && git clone https://$ACCESS_TOKEN@github.com/palo-it-hk/learning-web-1-basic-html-css.git $BASICFOLDER
 cd $BASICFOLDER;
+git config pull.rebase true
 git config user.name $USERNAME;
 git pull;
 
