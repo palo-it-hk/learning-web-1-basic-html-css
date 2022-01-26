@@ -17,7 +17,7 @@ then
   brew upgrade
 else
   echo 'Installing HomebBrew'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install VSCode if it's not already installed
