@@ -1,1 +1,0 @@
-# Content available after the Lunch & Learn. [Go Back](../README.md)
