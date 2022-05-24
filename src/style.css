@@ -2,41 +2,43 @@
  * DEFINE SOME VARIABLES FOR REUSE
  */
 :root {
-  --font-family: Montserrat, Helvetica, Arial, sans-serif;
+  --font-family: montserrat, helvetica, arial, sans-serif;
   --primary-color: #04a37a;
   --main-bg-color: #f5f5f5;
 }
+
 /**
  * APP STYLES
  */
 *,
 *::before,
 *::after {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html {
-    color: var(--primary-color);
-    background-color: var(--main-bg-color);
-    font-family: var(--font-family);
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  color: var(--primary-color);
+  background-color: var(--main-bg-color);
+  font-family: var(--font-family);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
+
 .social {
   text-align: center;
 }
+
 .social ul {
   list-style-type: none;
 }
+
 .social li {
   padding-bottom: 2rem;
 }
-#remote-content img {
-  max-height: 50rem;
-  max-width: 50rem;
-}
+
 /**
- * SOCIAL NETWORK ICONS
- */
+* SOCIAL NETWORK ICONS
+*/
 .fa {
   padding: 20px;
   border-radius: 50%;
@@ -46,34 +48,45 @@ html {
   text-decoration: none;
   color: white;
 }
+
 /* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
 }
+
 /* Set a specific color for each brand */
 .fa-facebook {
-  background: #3B5998;
+  background: #3b5998;
 }
+
 .fa-twitter {
-  background: #55ACEE;
-  
+  background: #55acee;
 }
+
 /**
- * LOADING SPINNER
+ * REMOTE CONTENT AREA
  */
-svg {
+#remote-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#remote-content svg {
   animation: 2s linear infinite svg-animation;
   max-width: 100px;
 }
+
 @keyframes svg-animation {
   0% {
     transform: rotateZ(0deg);
   }
+
   100% {
-    transform: rotateZ(360deg)
+    transform: rotateZ(360deg);
   }
 }
-circle {
+
+#remote-content circle {
   animation: 1.4s ease-in-out infinite both circle-animation;
   display: block;
   fill: transparent;
@@ -84,19 +97,20 @@ circle {
   stroke-width: 10px;
   transform-origin: 50% 50%;
 }
+
 @keyframes circle-animation {
   0%,
   25% {
     stroke-dashoffset: 280;
     transform: rotate(0);
   }
-  
+
   50%,
   75% {
     stroke-dashoffset: 75;
     transform: rotate(45deg);
   }
-  
+
   100% {
     stroke-dashoffset: 280;
     transform: rotate(360deg);

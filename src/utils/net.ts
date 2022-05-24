@@ -1,13 +1,13 @@
-import { backendUrl } from './config'
+import { backendUrl } from "./config";
 
-export async function fetchData() {
+export default async function fetchData() {
   try {
     const response = await fetch(backendUrl, {
-      mode: 'cors'
-    })
-    const body = await response.json()
-    return body.message
-  } catch(err) {
-    console.log(err)
+      mode: "cors",
+    });
+    const body = await response.json();
+    return body.message;
+  } catch (err) {
+    return "PROBLEM_FETCH_DATA";
   }
 }
