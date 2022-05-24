@@ -4,10 +4,9 @@
     {{> head }}
   </head>
   <body>
-    {{> header }}
-    {{> hero }}
-		<section class="section">
-			<div class="tile is-ancestor">
+    {{> header }} {{> hero }}
+    <section class="section">
+      <div class="tile is-ancestor">
         <div class="tile">
           <div class="tile is-parent">
             <article class="tile is-child notification is-warning">
@@ -16,10 +15,10 @@
               <a class="button" href="/">Go Home</a>
             </article>
           </div>
-        </div>		
-			</div>
-		</section>
-		{{> footer }}
+        </div>
+      </div>
+    </section>
+    {{> footer }}
     <script type="module" src="./about.ts"></script>
   </body>
 </html>
