@@ -1,4 +1,4 @@
-{
+ {
   "name": "html-bootstrap",
   "version": "1.0.0",
   "description": "A bootstrap project for simple HTML sites without frameworks",
@@ -27,8 +27,5 @@
     "vite": "^2.9.9",
     "vite-plugin-handlebars": "^1.6.0",
     "vite-plugin-minify": "^1.1.1"
-  },
-  "dependencies": {
-    "winston": "^3.7.2"
   }
 }
