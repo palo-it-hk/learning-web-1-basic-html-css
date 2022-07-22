@@ -117,6 +117,7 @@ For newcomers to web development, many of the terms and technologies may be unfa
 
 ## Further Reading
 
+* [What is the `HTML DOM Document Object`?](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 * [The web browser request cycle simplified](https://www.codecademy.com/article/request-response-cycle-static)
 * [Breakdown of what an HTML5 file is](https://www.sitepoint.com/a-minimal-html-document-html5-edition/)
 * [What is the HTML DOM?](https://www.w3schools.com/whatis/whatis_htmldom.asp)

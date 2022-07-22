@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{> head }}
+    <meta charset="utf-8" />
+    <title>fuwk.me - fun work framework</title>
+    <meta
+      name="Description"
+      content="A simple frontend SPA framework for learning to be a web developer"
+    />
+    <meta property="og:url" content="https://simonball.me" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Simon Ball" />
+    <meta
+      property="og:description"
+      content="A simple frontend SPA framework for learning to be a web developer"
+    />
+    <meta property="og:image" content="https://fuwk.me/images/ox.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
   </head>
   <body>
-    <div id="app">
-      {{> header }} {{> hero }}
-      <section class="section">
-        <div class="tile is-ancestor">
-          <div class="tile">
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-warning">
-                <p class="title">Hey!</p>
-                <p class="subtitle">There's a few things going on here:</p>
-                <ul>
-                  <li>The welcome banner text changes on page load</li>
-                  <li>A random picture of a dog is fetched from the web</li>
-                  <li>You have a second page!</li>
-                </ul>
-                <a class="button" href="/about/">Go to your second page</a>
-              </article>
-            </div>
-          </div>
-          {{> remote }} {{> social }}
-        </div>
-      </section>
-      {{> footer }}
+    <div id="fuwk-app">
+      <noscript>
+        This site requires JavaScript to function properly...
+      </noscript>
     </div>
     <script type="module" src="./index.ts"></script>
   </body>

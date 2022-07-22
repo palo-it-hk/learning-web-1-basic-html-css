@@ -3,10 +3,7 @@
  */
 :root {
   --font-family: montserrat, helvetica, arial, sans-serif;
-  --primary-color: #04a37a;
-  --main-bg-color: #f5f5f5;
 }
-
 /**
  * APP STYLES
  */
@@ -17,12 +14,23 @@
 }
 
 html {
-  color: var(--primary-color);
-  background-color: var(--main-bg-color);
-  font-family: var(--font-family);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+/**
+ * BASE MATERIAL DESIGN OVERRIDES
+ */
+.mdl-layout__content {
+  align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content > .mdl-grid {
+  max-width: 1200px;
+}
+.mdl-card > .mdl-card__supporting-text {
+  width: 100%;
+}
+
 
 .social {
   text-align: center;
